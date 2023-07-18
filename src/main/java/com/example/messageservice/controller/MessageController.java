@@ -24,8 +24,6 @@ public class MessageController {
     public MessageController(MessageService messageService) {
         this.messageService = messageService;
     }
-    //TODO: 1. 增加token authentication 里面去获取userId
-    //根据token来判断 userId，如果没有userId，就给一个0 作为userId 表示是visitor
     @PostMapping
     public ResponseEntity<GeneralResponse> createMessage(@RequestBody Message message) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
