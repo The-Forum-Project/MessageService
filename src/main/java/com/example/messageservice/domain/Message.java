@@ -21,7 +21,7 @@ public class Message {
     @Column(name = "message_id")
     private int messageId;
     @Column(name = "user_id")
-    private int userId;
+    private Long userId;
     @Column(name = "email")
     private String email;
     @Column(name = "message")
