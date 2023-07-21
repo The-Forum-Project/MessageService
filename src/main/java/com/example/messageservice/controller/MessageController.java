@@ -16,6 +16,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/messages")
 public class MessageController {
     private MessageService messageService;

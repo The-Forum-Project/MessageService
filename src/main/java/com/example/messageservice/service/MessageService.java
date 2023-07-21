@@ -42,7 +42,9 @@ public class MessageService {
             messageDao.updateMessage(message);
             return true;
         } else if (message != null && message.getStatus() == 1) {
-            return false;
+            message.setStatus(0);
+            messageDao.updateMessage(message);
+            return true;
         } else {
             throw new MessageNotFoundException();
         }
